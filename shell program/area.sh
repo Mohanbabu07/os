@@ -1,8 +1,8 @@
-pi=`expr "scale=2; 22 / 7" | bc`
+pi=$(echo "scale=2; 22 / 7" | bc)
 readonly pi
-echo "enter value for radius"
+echo "Enter value for radius:"
 read radius
-area=`expr "scale=2; $pi * $radius * $radius" | bc`
-circum=`expr "scale=2; 2* $pi * $radius" | bc`
-echo "area: $area"
-echo "circumference : $circum"
+area=$(echo "scale=2; $pi * $radius * $radius" | bc)
+circum=$(echo "scale=2; 2 * $pi * $radius" | bc)
+echo "Area: $area"
+echo "Circumference: $circum"
